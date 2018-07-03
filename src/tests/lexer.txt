@@ -1,0 +1,4 @@
+int main() {
+        lexertest += 1;
+        printf("hello, world\n\"\\\"\\");
+}
