@@ -1,4 +1,8 @@
 int main() {
         lexertest += 1;
         printf("hello, world\n\"\\\"\\");
+        "single-line quote"
+        "\
+multi-line quote
+etc. etc."
 }
