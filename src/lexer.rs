@@ -1,10 +1,16 @@
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Token {
-    line: usize,
-    col:  usize,
-    head: usize,
-    tail: usize,
-    quote: bool,
+    pub line: usize,
+    pub col:  usize,
+    pub head: usize,
+    pub tail: usize,
+    pub quote: bool,
+}
+
+impl Token {
+    pub fn get<'a>(&self, file: &'a [char]) -> &'a [char] {
+        &file[self.head..self.tail]
+    }
 }
 
 pub fn format_item(file: &[char], item: Token) -> String {
